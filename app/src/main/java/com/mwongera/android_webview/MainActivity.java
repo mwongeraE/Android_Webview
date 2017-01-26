@@ -54,6 +54,31 @@ public class MainActivity extends AppCompatActivity {
                     .gradientDivider(false)
                     .setCustomAnimations(R.anim.slide_up, R.anim.hold, R.anim.hold, R.anim.slide_down)
                     .show("http://example.com");
+        } else if (view.getId() == R.id.blackTheme) {
+            new FinestWebView.Builder(this).theme(R.style.FinestWebViewTheme)
+                    .titleDefault("Dribbble")
+                    .toolbarScrollFlags(0)
+                    .statusBarColorRes(R.color.Color_Gray)
+                    .toolbarColorRes(R.color.Color_Black)
+                    .titleColorRes(R.color.finestWhite)
+                    .urlColorRes(R.color.finestBlack)
+                    .iconDefaultColorRes(R.color.finestWhite)
+                    .progressBarColorRes(R.color.finestWhite)
+                    .swipeRefreshColorRes(R.color.Color_DarkTurquoise)
+                    .menuSelector(R.drawable.selector_light_theme)
+                    .menuTextGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT)
+                    .menuTextPaddingRightRes(R.dimen.defaultMenuTextPaddingLeft)
+                    .dividerHeight(0)
+                    .gradientDivider(false)
+                    //                    .setCustomAnimations(R.anim.slide_up, R.anim.hold, R.anim.hold, R.anim.slide_down)
+                    .setCustomAnimations(R.anim.slide_left_in, R.anim.hold, R.anim.hold,
+                            R.anim.slide_right_out)
+                    //                    .setCustomAnimations(R.anim.fade_in_fast, R.anim.fade_out_medium, R.anim.fade_in_medium, R.anim.fade_out_fast)
+                    .disableIconBack(true)
+                    .disableIconClose(true)
+                    .disableIconForward(true)
+                    .disableIconMenu(true)
+                    .show("https://dribbble.com");
         }
     }
 }
