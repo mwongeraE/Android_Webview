@@ -2,6 +2,7 @@ package com.mwongera.android_webview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 
 import com.thefinestartist.finestwebview.FinestWebView;
@@ -31,6 +32,28 @@ public class MainActivity extends AppCompatActivity {
                             + "TheFinestArtist"
                             + "!';")
                     .show("http://www.blessthisstuff.com");
+        } else if (view.getId() == R.id.blueTheme) {
+            new FinestWebView.Builder(this).theme(R.style.FinestWebViewTheme)
+                    .titleDefault("Vimeo")
+                    .showUrl(false)
+                    .statusBarColorRes(R.color.Color_Blue)
+                    .toolbarColorRes(R.color.Color_LightSkyBlue)
+                    .titleColorRes(R.color.finestWhite)
+                    .urlColorRes(R.color.Color_DeepSkyBlue)
+                    .iconDefaultColorRes(R.color.finestWhite)
+                    .progressBarColorRes(R.color.finestWhite)
+                    .stringResCopiedToClipboard(R.string.copied_to_clipboard)
+                    .stringResCopiedToClipboard(R.string.copied_to_clipboard)
+                    .stringResCopiedToClipboard(R.string.copied_to_clipboard)
+                    .showSwipeRefreshLayout(true)
+                    .swipeRefreshColorRes(R.color.Color_SteelBlue)
+                    .menuSelector(R.drawable.selector_light_theme)
+                    .menuTextGravity(Gravity.CENTER)
+                    .menuTextPaddingRightRes(R.dimen.defaultMenuTextPaddingLeft)
+                    .dividerHeight(0)
+                    .gradientDivider(false)
+                    .setCustomAnimations(R.anim.slide_up, R.anim.hold, R.anim.hold, R.anim.slide_down)
+                    .show("http://example.com");
         }
     }
 }
