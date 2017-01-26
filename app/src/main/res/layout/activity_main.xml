@@ -36,7 +36,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/Color_DodgerBlue"
         android:onClick="onClick"
-        android:text="Default Theme"
+        android:text="Blue Theme"
         android:textColor="@color/finestWhite"
         />
 
@@ -47,7 +47,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/Color_Black"
         android:onClick="onClick"
-        android:text="Default Theme"
+        android:text="Black Theme"
         android:textColor="@color/finestWhite"
         />
 
