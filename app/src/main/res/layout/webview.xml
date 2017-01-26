@@ -42,4 +42,22 @@
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/gradient"
+        android:layout_marginTop="56dp"
+        android:background="@color/finestBlack10"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="56dp"
+        android:id="@+id/progressBar"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/progress_drawable"
+        style="?android:attr/progressBarStyleHorizontal"
+        />
+
+    <include layout="@layout/menus"/>
+
 </android.support.design.widget.CoordinatorLayout>
